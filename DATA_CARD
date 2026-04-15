@@ -1,0 +1,135 @@
+DATA CARD
+	
+1.	Project Overview
+This repository presents KPI-based data quality analysis for historical stock market data of five companies: Amazon, Apple, Microsoft, Nvidia, and Tesla.
+
+Each company is analyzed in a separate Jupyter Notebook using Python. The goal of the project is to evaluate the quality, reliability, and usability of financial data, with a focus on the Close price and overall dataset integrity.
+
+
+
+
+	2.	Source of Data
+
+The data used in this project was collected from Yahoo Finance using the Python library yfinance.
+
+Data Source Description:
+	•	Source: Yahoo Finance (public financial data provider)
+	•	Access method: yfinance API
+	•	Data type: historical stock market data
+	•	Frequency: daily (1d)
+	•	Format: tabular time-series data
+
+Variables included:
+	•	Open
+	•	High
+	•	Low
+	•	Close
+	•	Volume
+	•	Dividends
+	•	Stock Splits
+
+Data Collection Method:
+Data was retrieved programmatically using Python with the history() function.
+
+Time Ranges per Company:
+	•	Amazon (AMZN): 2009-06-07 – 2010-06-07
+	•	Apple (AAPL): 2024-01-01 – 2025-01-01
+	•	Microsoft (MSFT): 2023-11-02 – 2024-11-02
+	•	Nvidia (NVDA): 2020-06-05 – 2021-06-05
+	•	Tesla (TSLA): 2025-02-01 – 2026-02-01
+
+Important Notes:
+	•	The data is secondary (not collected manually)
+	•	It depends on Yahoo Finance accuracy and availability
+	•	Market conditions influence values (volatility, trends, anomalies)
+
+
+
+
+
+	3.	KPIs
+
+The following KPIs were used to evaluate data quality:
+
+Data Completeness
+Measures whether missing values exist in the dataset
+
+Data Latency
+Verifies the time range and availability of data
+
+Data Consistency
+Checks whether data types and structure are uniform
+
+Error Rate
+Includes missing value rate, duplicate rate, and outlier rate (based on IQR method)
+
+Data Accuracy
+Checks validity of Close prices, Volume values, and absence of duplicates
+
+
+
+
+
+
+	4.	KPI Results
+
+Amazon
+	•	Rows: 251
+	•	Missing values: 0 (0.0%)
+	•	Duplicate rate: 0.0%
+	•	Outlier rate: 0.0%
+	•	Data accuracy: 100%
+	•	Close price range: 3.7815 – 7.5045
+
+Apple
+	•	Rows: 252
+	•	Missing values: 0 (0.0%)
+	•	Duplicate rate: 0.0%
+	•	Outlier rate: 0.0%
+	•	Data accuracy: 100%
+	•	Close price range: 163.5119 – 257.6127
+
+Microsoft
+	•	Rows: 252
+	•	Missing values: 0 (0.0%)
+	•	Duplicate rate: 0.0%
+	•	Outlier rate: 3.17%
+	•	Data accuracy: 100%
+	•	Close price range: 341.7278 – 461.3226
+
+Nvidia
+	•	Rows: 252
+	•	Missing values: 0 (0.0%)
+	•	Duplicate rate: 0.0%
+	•	Outlier rate: 15.08%
+	•	Data accuracy: 100%
+	•	Close price range: 8.7659 – 17.5341
+
+Tesla
+	•	Rows: 250
+	•	Missing values: 0 (0.0%)
+	•	Duplicate rate: 0.0%
+	•	Outlier rate: 0.0%
+	•	Data accuracy: 100%
+	•	Close price range: 221.8600 – 489.8800
+
+
+
+
+
+
+	5.	Conclusion
+
+The analysis shows that all datasets are of high quality and reliability.
+
+Key findings:
+	•	No missing values were detected
+	•	No duplicate records were found
+	•	All values are valid and positive
+	•	Data structure is consistent across all companies
+	•	Overall data accuracy reached 100%
+
+Some datasets (especially Nvidia and Microsoft) contain outliers. However, in financial data this reflects real market behavior rather than errors.
+
+Final assessment:
+The data is clean, complete, consistent, and accurate, and can be reliably used for KPI analysis and further financial modeling.
